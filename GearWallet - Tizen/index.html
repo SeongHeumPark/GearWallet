@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<title>GearWallet UI</title>
+	<link rel="stylesheet"  href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet"  href="css/style.css">
+</head>
+
+<body>
+	<div id="main" class="ui-page ui-page-active">
+	<link rel="stylesheet"  href="ui/css/sectionchanger.css">
+		<header class="ui-header">
+			<h2 class="ui-title"><img alt="GearWallet" src="icon.png" width="30" height="30"> GearWallet</h2>
+		</header>
+		<div id="tabsectionchanger" class="ui-content">
+			<!-- section changer has only one child. -->
+			<div>
+				<section class="ui-section-active" style="text-align:center">
+					<h3> POINT CARD </h3>
+					<ul id="list-pointcard" class="ui-listview">
+					</ul>
+				</section>
+				<section style="text-align:center">
+					<h3> CREDIT CARD </h3>
+					<ul id="list-creditcard" class="ui-listview">
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-page" id="imagePage">
+		<div id="imageView" class="container"></div>
+    	</div>
+    	<div id="popupToast" class="ui-popup ui-popup-toast">
+    		<div id="popupToastMsg" class="ui-popup-content" style="overflow-y:scroll;">
+  	</div>
+  </div>
+</body>
+
+<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/sap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>

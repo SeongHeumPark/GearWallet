@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bladek.gearwallet"
+    android:versionCode="2"
+    android:versionName="2.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.samsung.accessory.permission.ACCESSORY_FRAMEWORK" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="com.samsung.wmanager.APP" />
+    <uses-permission android:name="com.samsung.WATCH_APP_TYPE.Linked_Follower" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- Activities -->
+        <activity
+            android:name="com.bladek.gearwallet.main.GearWalletActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.pointcard.PointCardRegisteActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.pointcard.PointCardViewActivity"
+           	android:theme="@android:style/Theme.Translucent" >            
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.pointcard.PointBarChartActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.creditcard.CreditCardRegisteActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.creditcard.CreditCardViewActivity"
+           	android:theme="@android:style/Theme.Translucent" >            
+        </activity>
+        
+        <activity 
+            android:name="com.bladek.gearwallet.creditcard.CreditBarChartActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <!-- Services -->
+        <service android:name="com.samsung.android.sdk.accessory.example.galleryprovider.GalleryProviderService" >
+            <intent-filter>
+                <action android:name="com.samsung.android.example.galleryprovider" />
+            </intent-filter>
+        </service>
+
+        <!-- Receivers -->
+        <receiver android:name="com.samsung.android.sdk.accessory.ServiceConnectionIndicationBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.accessory.service.action.ACCESSORY_SERVICE_CONNECTION_IND" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.samsung.android.sdk.accessory.RegisterUponInstallReceiver" >
+            <intent-filter>
+                <action android:name="android.accessory.device.action.REGISTER_AFTER_INSTALL" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- Meta-datas -->
+        <meta-data
+            android:name="AccessoryServicesLocation"
+            android:value="/res/xml/accessoryservices.xml" />
+        
+        <meta-data
+            android:name="GearAppType"
+            android:value="wgt" />
+    </application>
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application -->
+    <string name="app_name">GearWallet</string>
+	<string name="ConnectionEstablishedMsg">GearWallet Connection established with RemotePeer</string>
+	
+	<!-- Point Card -->
+	<string name="pointcard">Point Card</string>
+	<string name="registe_pointcard">Registe Point Card</string>
+		
+	<!-- Credit Card -->
+	<string name="creditcard">Credit Card</string>
+	<string name="card_validity">Vaildity</string>
+	<string name="card_cvc">CVC</string>
+	<string name="validity_hint_month">MM</string>
+	<string name="validity_hint_year">YY</string>
+	<string name="cvc_hint">Back Number 3</string>
+	<string name="registe_creditcard">Registe Credit Card</string>
+		
+	<!-- Common -->
+	<string name="card_name">Name</string>
+	<string name="card_name_hint">Less than 15 &amp; greater than 4</string>
+	<string name="card_number">Number</string>
+	<string name="card_number_hint">1111222233334444</string>
+	<string name="preview">Preview</string>
+	<string name="set_color">Color</string>
+	<string name="registe">Registe</string>
+	<string name="special_character_error">You must enter English</string>
+	<string name="create_complete">card registe complete!</string>
+
+	<string name="slash">/</string>
+	<string name="limited_character">^[a<![CDATA[-]]>zA<![CDATA[-]]>Z]+$</string>
+	
+</resources>
